@@ -1,3 +1,4 @@
+package br.com.alura.screenmatch.Principal;
 import java.util.ArrayList;
 
 import br.com.alura.screenmatch.calculo.CalculadoraDeTempo;
@@ -10,7 +11,7 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        Filme favorito = new Filme("The Matrix", 1999);
+        Filme favorito = new Filme ("The Matrix", 1999);
         favorito.setDuracaoEmMinutos(136);
         favorito.setIncluidoNoPlano(true);
         favorito.exibeFichaTecnica();
@@ -57,6 +58,6 @@ public class Principal {
         System.out.println("Tamanho da lista " + listaDeFilmes.size());
         System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
         System.out.println(listaDeFilmes);
-        System.out.println("toString do filme " + listaDeFilmes.get(0).toString());
+        //System.out.println("toString do filme " + listaDeFilmes.get(0).toString());
     }
 }
