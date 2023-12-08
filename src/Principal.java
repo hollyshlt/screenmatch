@@ -9,13 +9,11 @@ import br.com.alura.screenmatch.modelos.Serie;
 public class Principal {
 
     public static void main(String[] args) {
-        Filme favorito = new Filme();
 
-        favorito.setNome("The Matrix");
+        Filme favorito = new Filme("The Matrix");
         favorito.setAnoDeLancamento(1999);
-        favorito.setDuracaoEmMinutos(135);
+        favorito.setDuracaoEmMinutos(136);
         favorito.setIncluidoNoPlano(true);
-
         favorito.exibeFichaTecnica();
         favorito.avalia(10);
         favorito.avalia(9);
@@ -32,11 +30,9 @@ public class Principal {
         lost.setMinutosPorEpisodio(50);
         System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinutos());
 
-        Filme outroFavorito = new Filme();
-
-        outroFavorito.setNome("The Matrix");
-        outroFavorito.setAnoDeLancamento(1999);
-        outroFavorito.setDuracaoEmMinutos(200);
+        Filme outroFavorito = new Filme("O poderoso chefão");
+        outroFavorito.setAnoDeLancamento(1972);
+        outroFavorito.setDuracaoEmMinutos(175);
         outroFavorito.setIncluidoNoPlano(true);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -54,9 +50,8 @@ public class Principal {
         episodio.setTotalVisualizacoes(500);
         filtro.filtra(episodio);
 
-        Filme filmeDoRafael = new Filme();
+        var filmeDoRafael = new Filme("Dogville");
         filmeDoRafael.setDuracaoEmMinutos(200);
-        filmeDoRafael.setNome("Dogville");
         filmeDoRafael.setAnoDeLancamento(2003);
         filmeDoRafael.avalia(10);
 
@@ -67,5 +62,6 @@ public class Principal {
         System.out.println("Tamanho da lista " + listaDeFilmes.size());
         System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
         System.out.println(listaDeFilmes);
+        System.out.println("toString do filme " + listaDeFilmes.get(0).toString());
     }
 }
