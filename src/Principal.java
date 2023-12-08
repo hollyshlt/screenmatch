@@ -10,8 +10,7 @@ public class Principal {
 
     public static void main(String[] args) {
 
-        Filme favorito = new Filme("The Matrix");
-        favorito.setAnoDeLancamento(1999);
+        Filme favorito = new Filme("The Matrix", 1999);
         favorito.setDuracaoEmMinutos(136);
         favorito.setIncluidoNoPlano(true);
         favorito.exibeFichaTecnica();
@@ -21,17 +20,14 @@ public class Principal {
 
         System.out.println("Média de avaliações do filme: " +favorito.pegaMedia());
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("Lost", 2000);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
         lost.setMinutosPorEpisodio(50);
         System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinutos());
 
-        Filme outroFavorito = new Filme("O poderoso chefão");
-        outroFavorito.setAnoDeLancamento(1972);
+        Filme outroFavorito = new Filme("O poderoso chefão", 1972);
         outroFavorito.setDuracaoEmMinutos(175);
         outroFavorito.setIncluidoNoPlano(true);
 
@@ -50,9 +46,8 @@ public class Principal {
         episodio.setTotalVisualizacoes(500);
         filtro.filtra(episodio);
 
-        var filmeDoRafael = new Filme("Dogville");
+        var filmeDoRafael = new Filme("Dogville", 2003);
         filmeDoRafael.setDuracaoEmMinutos(200);
-        filmeDoRafael.setAnoDeLancamento(2003);
         filmeDoRafael.avalia(10);
 
         ArrayList<Filme> listaDeFilmes = new ArrayList<>();
