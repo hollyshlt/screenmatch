@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 import br.com.alura.screenmatch.calculo.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculo.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
@@ -15,9 +17,9 @@ public class Principal {
         favorito.setIncluidoNoPlano(true);
 
         favorito.exibeFichaTecnica();
-        favorito.avalia(4);
-        favorito.avalia(5);
-        favorito.avalia(1);
+        favorito.avalia(10);
+        favorito.avalia(9);
+        favorito.avalia(8);
 
         System.out.println("Média de avaliações do filme: " +favorito.pegaMedia());
 
@@ -51,5 +53,19 @@ public class Principal {
         episodio.setSerie(lost);
         episodio.setTotalVisualizacoes(500);
         filtro.filtra(episodio);
+
+        Filme filmeDoRafael = new Filme();
+        filmeDoRafael.setDuracaoEmMinutos(200);
+        filmeDoRafael.setNome("Dogville");
+        filmeDoRafael.setAnoDeLancamento(2003);
+        filmeDoRafael.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeDoRafael);
+        listaDeFilmes.add(favorito);
+        listaDeFilmes.add(outroFavorito);
+        System.out.println("Tamanho da lista " + listaDeFilmes.size());
+        System.out.println("Primeiro filme " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
     }
 }
