@@ -1,9 +1,10 @@
 package br.com.alura.screenmatch.Principal;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
@@ -19,7 +20,7 @@ public class PrincipalComListas {
         filmeDoRafael.avalia(9);
         Serie lost = new Serie("Lost", 2000);
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new LinkedList<>();
         lista.add(filmeDoRafael);
         lista.add(favorito);
         lista.add(outroFavorito);
